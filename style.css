@@ -1,0 +1,27 @@
+* {
+	margin:0;
+	padding:0;
+	fot-family:tahoma, sans-serif;
+	box-sizeing: border-box;
+}
+body {
+	background: #1ddced;
+	}
+.chatbox{
+	width:500px;
+	min-width:390px;
+	height:600px;
+background: #fff;
+padding: 25px;
+margin:20px auto;
+}
+.chatlogs{
+	padding: 10px;
+	width:100%;
+	height: 450px;
+	background: #eee;
+}
+
+tr.chatlogy{
+	background-color: #eee;
+}

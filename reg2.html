@@ -1,0 +1,73 @@
+
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style2.css">
+<script>
+function validateForm()
+ {
+
+ var p = document.forms["form1"]["username"].value;
+    if (p == "") 
+{
+        alert("User Name must be filled out");
+        return false;
+}
+
+var w=  document.forms["form1"]["password"].value;
+		if(w =="")
+		{
+			alert("Password Field left blank");
+			return false;
+                 }
+                if (
+(w.length < 7) || (w.length > 12)) 
+                 {
+                         alert("Your Password must be 7 to 12 Character"); 
+                         return false;
+                   }
+var email= document.forms["form1"]["email"].value;
+		if(email =="")
+		{
+			alert("Email Field left blank");
+			return false;
+  		        
+                }
+                var z=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+                if(!z.test(email))
+		{
+			alert("Please Enter valid email");
+			return false;
+  		}
+
+    
+}
+
+</script>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> <a href="reg1.html">Sign In </a></h2>
+    <h2 class="inactive underlineHover">Sign Up </h2>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form name="form1" onsubmit="return validateForm()" action="register.php" method="post">
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="Create Username">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="Create Password">
+      <input type="text" id="email" class="fadeIn second" name="email" placeholder="Enter Email id">
+      <input type="submit" class="fadeIn fourth" name="submit" value="Sign up">
+    </form>
+
+    
+
+  </div>
+</div>
+</body>
+</html>
